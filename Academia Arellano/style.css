@@ -1,0 +1,367 @@
+/* ===========================
+   RESET Y TIPOGRAFÍA
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===========================
+   ESTILOS GENERALES
+=========================== */
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===========================
+   HEADER Y NAVEGACIÓN
+=========================== */
+header {
+    background: #0D47A1;
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.05);
+}
+
+#logo_Academia {
+    border-radius: 50%;
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #42A5F5;
+}
+
+nav a.active {
+    border-bottom: 2px solid #8BC34A;
+    padding-bottom: 2px;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: #E3F2FD;
+    border-bottom: 4px solid #8BC34A;
+    border-top: 4px solid #8BC34A;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    color: #0D47A1;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #2E7D32;
+    margin-bottom: 20px;
+}
+
+.btn-cta {
+    display: inline-block;
+    background: #0D47A1;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-cta:hover {
+    background: #1565C0;
+    transform: scale(1.05);
+}
+
+/* ===========================
+   SOBRE NOSOTROS
+=========================== */
+.about {
+    text-align: center;
+    padding: 50px 20px;
+    background: #ffffff;
+    border-bottom: 4px solid #8BC34A;
+}
+
+.about h2 {
+    font-size: 2em;
+    color: #0D47A1;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #333;
+}
+
+/* ===========================
+   SECCIÓN CURSOS
+=========================== */
+.cursos-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.cursos-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #1E3A8A;
+}
+
+.cursos-container .subtext {
+    font-size: 1.2rem;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.5;
+}
+
+/* Contenedor de tarjetas */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Tarjetas individuales */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    color: #2563EB;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Botón dentro de las tarjetas */
+.btn-card {
+    display: inline-block;
+    margin-top: 12px;
+    background: #0D47A1;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-card:hover {
+    background: #1565C0;
+    transform: scale(1.05);
+}
+
+/* ===========================
+   CONTACTO
+=========================== */
+.contact-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contact-form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+    color: #0D47A1;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 12px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #0D47A1;
+    outline: none;
+}
+
+.contact-info {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-info h3 {
+    margin-bottom: 10px;
+    color: #0D47A1;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* ===========================
+   CONTACTO (ACTUALIZADO)
+=========================== */
+.contact-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contact-form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+    color: #0D47A1;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 12px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #0D47A1;
+    outline: none;
+}
+
+.contact-info {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-info h3 {
+    margin: 15px 0 10px;
+    color: #0D47A1;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 1em;
+}
+
+/* Redes sociales dentro de contacto */
+.social-links-contact {
+    display: flex;
+    gap: 12px;
+    margin: 10px 0 15px;
+}
+
+.social-links-contact a img {
+    width: 28px;
+    transition: transform 0.3s ease;
+}
+
+.social-links-contact a img:hover {
+    transform: scale(1.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0D47A1;
+    color: white;
+}
+
+/* ===========================
+   RESPONSIVIDAD
+=========================== */
+@media (max-width: 768px) {
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
