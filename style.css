@@ -27,6 +27,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo-container {
@@ -249,64 +250,6 @@ nav a.active {
 }
 
 .contact-info h3 {
-    margin-bottom: 10px;
-    color: #0D47A1;
-}
-
-.contact-info p {
-    margin-bottom: 8px;
-    color: #333;
-}
-
-/* ===========================
-   CONTACTO (ACTUALIZADO)
-=========================== */
-.contact-container {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-
-.contact-form {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-form h2 {
-    margin-bottom: 15px;
-    color: #0D47A1;
-}
-
-.contact-form input,
-.contact-form textarea {
-    margin-bottom: 12px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1em;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #0D47A1;
-    outline: none;
-}
-
-.contact-info {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.contact-info h3 {
     margin: 15px 0 10px;
     color: #0D47A1;
 }
@@ -333,13 +276,6 @@ nav a.active {
     transform: scale(1.2);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* ===========================
    FOOTER
 =========================== */
@@ -351,16 +287,93 @@ footer {
 }
 
 /* ===========================
-   RESPONSIVIDAD
+   MEDIA QUERIES COMPLETAS + MENÚ DESPLEGABLE
 =========================== */
 @media (max-width: 768px) {
-    nav a {
-        display: inline-block;
-        margin: 8px;
+
+    /* Botón hamburguesa */
+    #menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        order: 1;
+        z-index: 1002;
     }
+
+    #menu-toggle .bar {
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 2px;
+    }
+
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15px;
+        position: relative;
+    }
+
+    /* Ocultar texto "Academia Arellano" */
+    .logo-container h2 {
+        display: none;
+    }
+
+    /* Logo a la derecha */
+    #logo_Academia {
+        order: 2;
+        margin-left: auto;
+    }
+
+    /* Menú oculto inicialmente */
+    header nav {
+        position: fixed;
+        top: 0;
+        right: -260px;
+        height: 100%;
+        width: 260px;
+        background: #1565C0;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+        transition: right 0.3s ease;
+        z-index: 1001;
+    }
+
+    /* Mostrar menú al abrir */
+    header nav.show {
+        right: 0;
+    }
+
+    /* Enlaces uno debajo del otro */
+    header nav a {
+        display: block;
+        margin: 20px 0;
+        font-size: 1.3em;
+        text-align: center;
+        padding: 10px 25px;
+    }
+
+    /* Cambiar indicador de página activa */
+    header nav a.active {
+        border: none;
+        background: #8BC34A;
+        border-radius: 5px;
+    }
+
+    /* Ajustes de hero */
     .hero h1 {
         font-size: 2em;
     }
+
+    /* Contacto */
     .contact-container {
         grid-template-columns: 1fr;
     }
